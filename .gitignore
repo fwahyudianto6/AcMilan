@@ -13,6 +13,9 @@ bin/
 gen/
 out/
 
+# Windows thumbnail db
+Thumbs.db
+
 # Gradle files
 .gradle/
 build/
@@ -31,6 +34,7 @@ proguard/
 
 # Android Studio captures folder
 captures/
+output.json 
 
 # IntelliJ
 *.iml
