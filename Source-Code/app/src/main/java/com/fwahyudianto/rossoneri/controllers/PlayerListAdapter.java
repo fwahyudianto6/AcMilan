@@ -16,6 +16,13 @@ import com.fwahyudianto.rossoneri.models.Player;
 
 import java.util.ArrayList;
 
+/**
+ * This software, all associated documentation, and all copies are CONFIDENTIAL INFORMATION of Kalpawreska Teknologi Indonesia
+ * http://www.fwahyudianto.id
+ * ® Wahyudianto, Fajar
+ * Email 	: fwahyudi06@gmail.com
+ */
+
 public class PlayerListAdapter extends RecyclerView.Adapter<PlayerListAdapter.ListViewHolder> {
     //  Variable
     private Context oContext;
