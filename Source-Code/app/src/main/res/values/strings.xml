@@ -1,4 +1,3 @@
 <resources>
-    <string name="app_name">Rossoneri</string>
-    <string name="strAcMilan">AC Milan</string>
+    <string name="configAppName">Rossoneri</string>
 </resources>

@@ -5,14 +5,15 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:padding="@dimen/horizontal_margin"
+    android:background="@drawable/list_background"
     tools:ignore="RtlHardcoded">
 
     <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/civ_picture"
-        android:layout_width="55dp"
-        android:layout_height="55dp"
-        android:layout_marginRight="@dimen/horizontal_margin"
+        android:layout_width="75dp"
+        android:layout_height="115dp"
         android:layout_marginEnd="@dimen/horizontal_margin"
+        android:layout_marginRight="@dimen/horizontal_margin"
         tools:src="@android:color/darker_gray" />
     <LinearLayout
         android:layout_toRightOf="@id/civ_picture"
@@ -22,18 +23,63 @@
         android:layout_centerVertical="true"
         android:orientation="vertical">
         <TextView
-            android:id="@+id/tv_full_name"
+            android:id="@+id/tv_nick_name"
             android:textSize="16sp"
             android:textStyle="bold"
-            tools:text="Fajar Wahyudainto"
+            tools:text="DJUDIL"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="8dp"/>
+            android:gravity="center"
+            android:layout_marginBottom="8dp" />
         <TextView
-            android:id="@+id/tv_player_descriptions"
+            android:id="@+id/tv_full_name"
+            android:textSize="16sp"
+            tools:text="FAJAR WAHYUDIANTO"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            tools:text="Software Developer"/>
-    </LinearLayout>
+            android:gravity="center"
+            android:layout_marginBottom="8dp" />
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp" >
+            <TextView
+                android:id="@+id/tv_number"
+                android:textSize="16sp"
+                tools:text="5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_weight="0.5" />
+            <TextView
+                android:id="@+id/tv_position"
+                android:textSize="16sp"
+                tools:text="Goalkeeper"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_weight="0.5" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp" >
+            <TextView
+                android:id="@+id/tv_birthdate"
+                tools:text="25 November 1992"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_weight="0.5" />
+            <TextView
+                android:id="@+id/tv_birthplace"
+                tools:text="Banyumas"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_weight="0.5" />
+        </LinearLayout>
+    </LinearLayout>
 </RelativeLayout>

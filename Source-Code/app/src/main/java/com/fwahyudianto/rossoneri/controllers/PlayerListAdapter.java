@@ -48,11 +48,15 @@ public class PlayerListAdapter extends RecyclerView.Adapter<PlayerListAdapter.Li
     @Override
     public void onBindViewHolder(@NonNull PlayerListAdapter.ListViewHolder oHolder, int iIndex) {
         oHolder.tvFullName.setText(getPlayer().get(iIndex).getFullName());
-        oHolder.tvDescriptions.setText(getPlayer().get(iIndex).getDescriptions());
+        oHolder.tvNickName.setText(getPlayer().get(iIndex).getNickName());
+        oHolder.tvNumber.setText(getPlayer().get(iIndex).getNumberTshirt());
+        oHolder.tvPosition.setText(getPlayer().get(iIndex).getPosition());
+        oHolder.tvBirthdate.setText(getPlayer().get(iIndex).getBirthdate());
+        oHolder.tvBirthplace.setText(getPlayer().get(iIndex).getBirthplace());
 
         Glide.with(oContext)
                 .load(getPlayer().get(iIndex).getPhoto())
-                .apply(new RequestOptions().override(55, 55))
+                .apply(new RequestOptions().override(75, 75))
                 .into(oHolder.ivPhoto);
     }
 
@@ -62,15 +66,23 @@ public class PlayerListAdapter extends RecyclerView.Adapter<PlayerListAdapter.Li
     }
 
     public class ListViewHolder extends RecyclerView.ViewHolder {
+        TextView tvNumber;
         TextView tvFullName;
-        TextView tvDescriptions;
+        TextView tvNickName;
+        TextView tvBirthdate;
+        TextView tvBirthplace;
+        TextView tvPosition;
         ImageView ivPhoto;
 
         public ListViewHolder(@NonNull View itemView) {
             super(itemView);
 
+            tvNumber = itemView.findViewById(R.id.tv_number);
             tvFullName = itemView.findViewById(R.id.tv_full_name);
-            tvDescriptions = itemView.findViewById(R.id.tv_player_descriptions);
+            tvNickName = itemView.findViewById(R.id.tv_nick_name);
+            tvBirthdate = itemView.findViewById(R.id.tv_birthdate);
+            tvBirthplace = itemView.findViewById(R.id.tv_birthplace);
+            tvPosition = itemView.findViewById(R.id.tv_position);
             ivPhoto = itemView.findViewById(R.id.civ_picture);
         }
     }
