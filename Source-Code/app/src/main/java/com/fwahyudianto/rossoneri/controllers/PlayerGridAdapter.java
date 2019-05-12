@@ -54,7 +54,7 @@ public class PlayerGridAdapter extends RecyclerView.Adapter<PlayerGridAdapter.Gr
 
     @Override
     public void onBindViewHolder(@NonNull GridViewHolder oHolder, int iIndex) {
-        oHolder.tvNumber.setText(getPlayer().get(iIndex).getNumberTshirt());
+        oHolder.tvNumber.setText(getPlayer().get(iIndex).getNumber());
         oHolder.tvFulName.setText(getPlayer().get(iIndex).getFullName());
 
         Glide.with(oContext)

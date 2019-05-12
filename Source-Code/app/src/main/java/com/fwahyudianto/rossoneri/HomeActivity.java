@@ -1,5 +1,6 @@
 package com.fwahyudianto.rossoneri;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
@@ -16,6 +17,13 @@ import com.fwahyudianto.rossoneri.models.Player;
 import com.fwahyudianto.rossoneri.models.PlayerData;
 
 import java.util.ArrayList;
+
+/**
+ * This software, all associated documentation, and all copies are CONFIDENTIAL INFORMATION of Kalpawreska Teknologi Indonesia
+ * http://www.fwahyudianto.id
+ * ® Wahyudianto, Fajar
+ * Email 	: fwahyudi06@gmail.com
+ */
 
 public class HomeActivity extends AppCompatActivity {
     final String m_strStateTitle = "state_title";
@@ -102,7 +110,7 @@ public class HomeActivity extends AppCompatActivity {
         PlayerItemClickSupport.addTo(oRecyclerView).setOnItemClickListener(new PlayerItemClickSupport.OnItemClickListener() {
             @Override
             public void onItemClicked(RecyclerView p_oRecyclerView, int p_iPosition, View p_oView) {
-                selectedItem(alData.get(p_iPosition));
+                selectedItemDetail(alData.get(p_iPosition));
             }
         });
     }
@@ -145,7 +153,13 @@ public class HomeActivity extends AppCompatActivity {
         setActionBarTitle(strTitle);
     }
 
-    private void selectedItem(Player oPlayer){
-        Toast.makeText(this, "You choose : " + oPlayer.getNickName(), Toast.LENGTH_SHORT).show();
+    private void selectedItem(Player p_oPlayer){
+        Toast.makeText(this, "You choose : " + p_oPlayer.getNickName(), Toast.LENGTH_SHORT).show();
+    }
+
+    private void selectedItemDetail(Player p_oPlayerDetail) {
+        Intent oPlayerDetail = new Intent(HomeActivity.this, PlayerDetailActivity.class);
+        oPlayerDetail.putExtra(PlayerDetailActivity.m_strStateList, p_oPlayerDetail);
+        startActivity(oPlayerDetail);
     }
 }

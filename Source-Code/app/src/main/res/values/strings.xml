@@ -4,4 +4,17 @@
     <string name="menu_home_strList">List View</string>
     <string name="menu_home_strGrid">Grid View</string>
     <string name="menu_home_strCard">Card View</string>
+    <string name="activity_detail_strNumberProfile">AC Milan\'s Player Number Tshirt</string>
+    <string name="activity_detail_lbl_strNumber">Number</string>
+    <string name="activity_detail_lbl_strBirthdate">Birthdate</string>
+    <string name="activity_detail_lbl_strBirthplace">Birthplace</string>
+    <string name="activity_detail_strStatusMatches">Stats and Matches</string>
+    <string name="activity_detail_strTotalMatchesDescription">AC Milan\'s Player Total Matches</string>
+    <string name="activity_detail_lbl_strTotalMatches">Total Matches</string>
+    <string name="activity_detail_strTotalGoalsDescription">AC Milan\'s Player Total Goals</string>
+    <string name="activity_detail_lbl_strTotalGoals">Total Goals</string>
+    <string name="activity_detail_strLeagueMatchesDescription">AC Milan\'s Player League Matches</string>
+    <string name="activity_detail_lbl_strLeagueMatches">League Matches</string>
+    <string name="activity_detail_strLeagueGoalsDescription">AC Milan\'s Player League Goals</string>
+    <string name="activity_detail_lbl_strLeagueGoals">League Goals</string>
 </resources>

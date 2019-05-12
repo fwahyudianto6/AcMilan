@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/sv_detail"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PlayerDetailActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Profile -->
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+            <ImageView
+                android:id="@+id/img_photo"
+                android:contentDescription="@string/item_grid_strFullname"
+                android:layout_width="match_parent"
+                android:layout_height="475dp"
+                android:layout_margin="1dp"
+                android:scaleType="centerCrop"
+                tools:src="@drawable/img_maldini" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="top"
+                android:background="@color/red_transparent"
+                android:orientation="vertical" >
+                <TextView
+                    style="@style/TextContent.White"
+                    android:id="@+id/tv_nick_name"
+                    android:textSize="40sp"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    tools:text="Maldini" />
+                <TextView
+                    style="@style/TextContent.White"
+                    android:id="@+id/tv_number"
+                    android:textSize="100sp"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    tools:text="3" />
+                <TextView
+                    style="@style/TextContent.White"
+                    android:id="@+id/tv_full_name"
+                    android:textSize="30sp"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    tools:text="Paolo Maldini" />
+            </LinearLayout>
+        </FrameLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimaryDark"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:id="@+id/img_badge_number"
+                android:contentDescription="@string/activity_detail_strNumberProfile"
+                android:layout_width="match_parent"
+                android:layout_height="125dp"
+                android:layout_margin="1dp"
+                android:layout_marginTop="32dp"
+                android:scaleType="center"
+                tools:src="@drawable/badge_tshirt" />
+            <TextView
+                style="@style/TextContent.White"
+                android:id="@+id/tv_number_tshirt_profile"
+                android:text="@string/activity_detail_lbl_strNumber"
+                android:textSize="25sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center" />
+            <TextView
+                style="@style/TextContent.White"
+                android:id="@+id/tv_number_tshirt"
+                android:textSize="50sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                tools:text="3" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom" >
+                <TextView
+                    style="@style/TextContent.White"
+                    android:id="@+id/tv_birthdate_profile"
+                    android:text="@string/activity_detail_lbl_strBirthdate"
+                    android:textSize="25sp"
+                    android:gravity="center"
+                    android:layout_weight="0.5"
+                    tools:text="Birthdate" />
+                <TextView
+                    style="@style/TextContent.White"
+                    android:id="@+id/tv_birthplace_profile"
+                    android:text="@string/activity_detail_lbl_strBirthplace"
+                    android:textSize="25sp"
+                    android:layout_marginBottom="4dp"
+                    android:gravity="center"
+                    android:layout_weight="0.5"
+                    tools:text="Birthplace" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/vertical_margin"
+                android:layout_gravity="bottom" >
+                <TextView
+                    style="@style/TextContent.White"
+                    android:id="@+id/tv_birthdate"
+                    android:textSize="25sp"
+                    android:gravity="center"
+                    android:layout_weight="0.5"
+                    tools:text="26 June 1968" />
+                <TextView
+                    style="@style/TextContent.White"
+                    android:id="@+id/tv_birthplace"
+                    android:textSize="25sp"
+                    android:layout_marginBottom="4dp"
+                    android:gravity="center"
+                    android:layout_weight="0.5"
+                    tools:text="Milano (Italy)" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Stats and Matches -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/white"
+            android:orientation="vertical" >
+            <TextView
+                style="@style/TextContent.Black"
+                android:text="@string/activity_detail_strStatusMatches"
+                android:textSize="35sp"
+                android:textStyle="bold"
+                android:layout_marginTop="32dp"
+                android:layout_marginBottom="64dp"
+                android:gravity="center"
+                tools:text="Stats and Matches" />
+
+            <!-- Total Matches -->
+            <ImageView
+                android:id="@+id/img_badge_total_matches"
+                android:contentDescription="@string/activity_detail_strTotalMatchesDescription"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_margin="1dp"
+                android:scaleType="center"
+                tools:src="@drawable/badge_matches" />
+            <TextView
+                style="@style/TextContent.Black"
+                android:id="@+id/tv_totalmatches_stats"
+                android:text="@string/activity_detail_lbl_strTotalMatches"
+                android:textSize="25sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center" />
+            <TextView
+                style="@style/TextContent.Black"
+                android:id="@+id/tv_totalmatches"
+                android:textSize="50sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="50dp"
+                android:gravity="center"
+                tools:text="902" />
+
+            <!-- Total Goals -->
+            <ImageView
+                android:id="@+id/img_badge_total_goals"
+                android:contentDescription="@string/activity_detail_strTotalGoalsDescription"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_margin="1dp"
+                android:scaleType="center"
+                tools:src="@drawable/badge_matches" />
+            <TextView
+                style="@style/TextContent.Black"
+                android:id="@+id/tv_totalgoals_stats"
+                android:text="@string/activity_detail_lbl_strTotalGoals"
+                android:textSize="25sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center" />
+            <TextView
+                style="@style/TextContent.Black"
+                android:id="@+id/tv_totalgoals"
+                android:textSize="50sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="50dp"
+                android:gravity="center"
+                tools:text="33" />
+
+            <!-- Serie A Matches -->
+            <ImageView
+                android:id="@+id/img_badge_league_matches"
+                android:contentDescription="@string/activity_detail_strLeagueMatchesDescription"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_margin="1dp"
+                android:scaleType="center"
+                tools:src="@drawable/badge_matches" />
+            <TextView
+                style="@style/TextContent.Black"
+                android:id="@+id/tv_leaguematches_stats"
+                android:text="@string/activity_detail_lbl_strLeagueMatches"
+                android:textSize="25sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center" />
+            <TextView
+                style="@style/TextContent.Black"
+                android:id="@+id/tv_leaguematches"
+                android:textSize="50sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="50dp"
+                android:gravity="center"
+                tools:text="902" />
+
+            <!-- Serie A Goals -->
+            <ImageView
+                android:id="@+id/img_badge_league_goals"
+                android:contentDescription="@string/activity_detail_strLeagueGoalsDescription"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_margin="1dp"
+                android:scaleType="center"
+                tools:src="@drawable/badge_matches" />
+            <TextView
+                style="@style/TextContent.Black"
+                android:id="@+id/tv_leaguegoals_stats"
+                android:text="@string/activity_detail_lbl_strLeagueGoals"
+                android:textSize="25sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center" />
+            <TextView
+                style="@style/TextContent.Black"
+                android:id="@+id/tv_leaguegoals"
+                android:textSize="50sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="50dp"
+                android:gravity="center"
+                tools:text="29" />
+        </LinearLayout>
+
+        <!-- Description -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/black"
+            android:orientation="vertical" >
+            <TextView
+                style="@style/TextContent.White"
+                android:id="@+id/tv_full_name_description"
+                android:textSize="40sp"
+                android:textStyle="bold"
+                android:layout_marginTop="32dp"
+                android:layout_marginBottom="@dimen/vertical_margin"
+                android:gravity="center"
+                tools:text="Maldini" />
+            <TextView
+                style="@style/TextContent.White"
+                android:id="@+id/tv_description"
+                android:textSize="20sp"
+                android:layout_marginTop="@dimen/vertical_margin"
+                android:layout_marginBottom="@dimen/vertical_margin"
+                tools:text="Description" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

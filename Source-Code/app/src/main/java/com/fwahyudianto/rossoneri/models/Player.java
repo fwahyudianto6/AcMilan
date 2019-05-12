@@ -62,7 +62,7 @@ public class Player implements Parcelable {
     };
 
     //  Gettter
-    public String getNumberTshirt() {
+    public String getNumber() {
         return m_strNumberTshirt;
     }
     public String getFullName() {
@@ -100,8 +100,8 @@ public class Player implements Parcelable {
     }
 
     //  Setter
-    public void setNumberTshirt(String p_strNumberTshirt) {
-        this.m_strNumberTshirt = p_strNumberTshirt;
+    public void setNumber(String p_strNumber) {
+        this.m_strNumberTshirt = p_strNumber;
     }
     public void setFullName(String p_strFullName) {
         this.m_strFullName = p_strFullName;

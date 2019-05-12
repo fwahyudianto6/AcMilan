@@ -175,7 +175,7 @@ public class PlayerData {
         for (String[] item : data) {
             oPlayer = new Player();
 
-            oPlayer.setNumberTshirt(item[0]);
+            oPlayer.setNumber(item[0]);
             oPlayer.setFullName(item[1]);
             oPlayer.setNickName(item[2]);
             oPlayer.setPosition(item[3]);

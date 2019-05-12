@@ -56,7 +56,7 @@ public class PlayerListAdapter extends RecyclerView.Adapter<PlayerListAdapter.Li
     public void onBindViewHolder(@NonNull PlayerListAdapter.ListViewHolder oHolder, int iIndex) {
         oHolder.tvFullName.setText(getPlayer().get(iIndex).getFullName());
         oHolder.tvNickName.setText(getPlayer().get(iIndex).getNickName());
-        oHolder.tvNumber.setText(getPlayer().get(iIndex).getNumberTshirt());
+        oHolder.tvNumber.setText(getPlayer().get(iIndex).getNumber());
         oHolder.tvPosition.setText(getPlayer().get(iIndex).getPosition());
         oHolder.tvBirthdate.setText(getPlayer().get(iIndex).getBirthdate());
         oHolder.tvBirthplace.setText(getPlayer().get(iIndex).getBirthplace());

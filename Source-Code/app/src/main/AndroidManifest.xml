@@ -12,21 +12,22 @@
         android:label="@string/configAppName"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true">
-
         <activity
             android:name=".MainActivity"
             android:theme="@style/Splash.FullScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <activity
             android:name=".HomeActivity"
             android:noHistory="true"
             android:theme="@style/AppTheme" />
-
+        <activity
+            android:name=".PlayerDetailActivity"
+            android:theme="@style/AppTheme"/>
     </application>
 
 </manifest>
