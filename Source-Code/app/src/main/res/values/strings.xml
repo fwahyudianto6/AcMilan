@@ -1,3 +1,7 @@
 <resources>
     <string name="configAppName">Rossoneri</string>
+    <string name="item_grid_strFullname">AC Milan\'s Player Full Name</string>
+    <string name="menu_home_strList">List View</string>
+    <string name="menu_home_strGrid">Grid View</string>
+    <string name="menu_home_strCard">Card View</string>
 </resources>

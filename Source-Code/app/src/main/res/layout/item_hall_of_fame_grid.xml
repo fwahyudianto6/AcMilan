@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" >
+        <ImageView
+            android:id="@+id/img_photo"
+            android:contentDescription="@string/item_grid_strFullname"
+            android:layout_width="match_parent"
+            android:layout_height="375dp"
+            android:layout_margin="1dp"
+            android:scaleType="centerCrop"
+            tools:src="@drawable/img_maldini" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:orientation="vertical" >
+            <TextView
+                style="@style/TextContent.White"
+                android:id="@+id/tv_number"
+                android:textSize="50sp"
+                android:textStyle="bold"
+                android:gravity="center"
+                tools:text="3" />
+            <TextView
+                style="@style/TextContent.White"
+                android:id="@+id/tv_full_name"
+                android:textSize="35sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="4dp"
+                android:gravity="center"
+                tools:text="Paolo Maldini" />
+        </LinearLayout>
+    </FrameLayout>
+</LinearLayout>

@@ -9,7 +9,7 @@
 
     <ImageView
         android:id="@+id/splash"
-        android:background="@drawable/acmilan_splash"
+        android:background="@drawable/splash_main"
         android:layout_height="match_parent"
         android:layout_width="wrap_content"
         android:layout_centerVertical="true"
