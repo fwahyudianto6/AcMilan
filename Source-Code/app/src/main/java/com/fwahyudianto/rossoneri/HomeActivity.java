@@ -6,9 +6,11 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.Toast;
 
 import com.fwahyudianto.rossoneri.controllers.PlayerGridAdapter;
+import com.fwahyudianto.rossoneri.controllers.PlayerItemClickSupport;
 import com.fwahyudianto.rossoneri.controllers.PlayerListAdapter;
 import com.fwahyudianto.rossoneri.models.Player;
 import com.fwahyudianto.rossoneri.models.PlayerData;
@@ -32,11 +34,6 @@ public class HomeActivity extends AppCompatActivity {
 
         oRecyclerView = findViewById(R.id.rv_main);
         oRecyclerView.setHasFixedSize(true);
-
-        /*
-        setActionBarTitle("Hall of Fame");
-        alData.addAll(PlayerData.List());
-        RecyclerList(); */
 
         alData = new ArrayList<>();
 
@@ -100,6 +97,14 @@ public class HomeActivity extends AppCompatActivity {
         oPlayerListAdapter.setPlayer(alData);
 
         oRecyclerView.setAdapter(oPlayerListAdapter);
+
+        //  Added Toast on Item
+        PlayerItemClickSupport.addTo(oRecyclerView).setOnItemClickListener(new PlayerItemClickSupport.OnItemClickListener() {
+            @Override
+            public void onItemClicked(RecyclerView p_oRecyclerView, int p_iPosition, View p_oView) {
+                selectedItem(alData.get(p_iPosition));
+            }
+        });
     }
 
     private void RecyclerGrid(){
@@ -109,6 +114,14 @@ public class HomeActivity extends AppCompatActivity {
         oPlayerGridAdapter.setPlayer(alData);
 
         oRecyclerView.setAdapter(oPlayerGridAdapter);
+
+        //  Added Toast on Item
+        PlayerItemClickSupport.addTo(oRecyclerView).setOnItemClickListener(new PlayerItemClickSupport.OnItemClickListener() {
+            @Override
+            public void onItemClicked(RecyclerView p_oRecyclerView, int p_iPosition, View p_oView) {
+                selectedItem(alData.get(p_iPosition));
+            }
+        });
     }
 
     private void setActionBarTitle(String p_strTitle) {
@@ -130,5 +143,9 @@ public class HomeActivity extends AppCompatActivity {
 
         iMode = p_iMode;
         setActionBarTitle(strTitle);
+    }
+
+    private void selectedItem(Player oPlayer){
+        Toast.makeText(this, "You choose : " + oPlayer.getNickName(), Toast.LENGTH_SHORT).show();
     }
 }
